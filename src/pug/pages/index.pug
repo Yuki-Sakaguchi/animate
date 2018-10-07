@@ -1,0 +1,19 @@
+extends ../common/_layout.pug
+
+block body
+  #app.wrapper
+    .inner
+      p {{ message }}
+      input(v-model="message")
+
+      .l-elem l-elem
+      .m-elem m-elem
+      .s-elem s-elem
+      .mb-elem mb-elem
+      .pc-elem pc-elem
+  
+  .anime(onclick="this.children[0].className+=' active';") この文字をクリックするとアニメーションを動かします
+    .a-fadein-up.a-mode--forwards.a-duration--10.a-timing--in-quit
+      |.activeをつけるとゆっくり現れます
+
+  <canvas id="myCanvas"></canvas>

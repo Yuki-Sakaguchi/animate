@@ -1,0 +1,2313 @@
+@charset "UTF-8";
+/* ========================================
+    common
+        サイト全体の設定、定義など
+======================================== */
+/* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - https://cssreset.com/ */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input, textarea, select {
+  *font-size: 100%;
+}
+
+legend {
+  color: #000;
+}
+
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/* ========================================
+    
+    base
+        タグに直接効かせるスタイル
+
+    INDEX
+        - common
+        - anti-aliasing
+        - form
+
+======================================== */
+/* ========================================
+    common
+======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/* ========================================
+    anti-aliasing
+======================================== */
+body,
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  body,
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ========================================
+    form
+======================================== */
+@media screen and (max-width: 780px) {
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+/* ========================================
+    
+    parts
+        付けるだけで動くスタイルのパーツ
+
+    INDEX
+        - element
+        - layout
+        - font
+        - color
+        - margin, padding
+        - border
+
+======================================== */
+/* ========================================
+    element
+======================================== */
+@media not screen and (min-width: 1081px) {
+  .xl-elem {
+    display: none !important;
+  }
+}
+
+.xl-elem--inline {
+  display: inline;
+}
+
+@media not screen and (min-width: 1081px) {
+  .xl-elem--inline {
+    display: none !important;
+  }
+}
+
+@media not screen and (min-width: 781px) and (max-width: 1080px) {
+  .l-elem {
+    display: none !important;
+  }
+}
+
+.l-elem--inline {
+  display: inline;
+}
+
+@media not screen and (min-width: 781px) and (max-width: 1080px) {
+  .l-elem--inline {
+    display: none !important;
+  }
+}
+
+@media not screen and (min-width: 481px) and (max-width: 780px) {
+  .m-elem {
+    display: none !important;
+  }
+}
+
+.m-elem--inline {
+  display: inline;
+}
+
+@media not screen and (min-width: 481px) and (max-width: 780px) {
+  .m-elem--inline {
+    display: none !important;
+  }
+}
+
+@media not screen and (max-width: 480px) {
+  .s-elem {
+    display: none !important;
+  }
+}
+
+.s-elem--inline {
+  display: inline;
+}
+
+@media not screen and (max-width: 480px) {
+  .s-elem--inline {
+    display: none !important;
+  }
+}
+
+@media not screen and (max-width: 780px) {
+  .mb-elem {
+    display: none !important;
+  }
+}
+
+.mb-elem--inline {
+  display: inline;
+}
+
+@media not screen and (max-width: 780px) {
+  .mb-elem--inline {
+    display: none !important;
+  }
+}
+
+@media not screen and (min-width: 781px) {
+  .pc-elem {
+    display: none !important;
+  }
+}
+
+.pc-elem--inline {
+  display: inline;
+}
+
+@media not screen and (min-width: 781px) {
+  .pc-elem--inline {
+    display: none !important;
+  }
+}
+
+/* ========================================
+    layout
+======================================== */
+.al-c {
+  text-align: center !important;
+}
+
+.al-r {
+  text-align: right !important;
+}
+
+.al-l {
+  text-align: left !important;
+}
+
+.fr {
+  float: right !important;
+}
+
+.fl {
+  float: left !important;
+}
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ========================================
+    font
+======================================== */
+.x-small {
+  font-size: 0.6em;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.large {
+  font-size: 1.2em;
+}
+
+.x-large {
+  font-size: 1.4em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.link {
+  color: red;
+}
+
+/* ========================================
+    color
+======================================== */
+.c-white {
+  color: white !important;
+}
+
+.c-gray {
+  color: gray !important;
+}
+
+.c-black {
+  color: black !important;
+}
+
+.c-red {
+  color: red !important;
+}
+
+.c-green {
+  color: green !important;
+}
+
+.c-blue {
+  color: blue !important;
+}
+
+.c-yellow {
+  color: yellow !important;
+}
+
+.c-pink {
+  color: pink !important;
+}
+
+.c-purple {
+  color: purple !important;
+}
+
+/* ========================================
+    margin, padding
+======================================== */
+.mt-0 {
+  margin-top: 0px !important;
+}
+
+.mr-0 {
+  margin-right: 0px !important;
+}
+
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.ml-0 {
+  margin-left: 0px !important;
+}
+
+.pt-0 {
+  padding-top: 0px !important;
+}
+
+.pr-0 {
+  padding-right: 0px !important;
+}
+
+.pb-0 {
+  padding-bottom: 0px !important;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.mt-5 {
+  margin-top: 5px !important;
+}
+
+.mr-5 {
+  margin-right: 5px !important;
+}
+
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.ml-5 {
+  margin-left: 5px !important;
+}
+
+.pt-5 {
+  padding-top: 5px !important;
+}
+
+.pr-5 {
+  padding-right: 5px !important;
+}
+
+.pb-5 {
+  padding-bottom: 5px !important;
+}
+
+.pl-5 {
+  padding-left: 5px !important;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.ml-10 {
+  margin-left: 10px !important;
+}
+
+.pt-10 {
+  padding-top: 10px !important;
+}
+
+.pr-10 {
+  padding-right: 10px !important;
+}
+
+.pb-10 {
+  padding-bottom: 10px !important;
+}
+
+.pl-10 {
+  padding-left: 10px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
+}
+
+.mr-15 {
+  margin-right: 15px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.ml-15 {
+  margin-left: 15px !important;
+}
+
+.pt-15 {
+  padding-top: 15px !important;
+}
+
+.pr-15 {
+  padding-right: 15px !important;
+}
+
+.pb-15 {
+  padding-bottom: 15px !important;
+}
+
+.pl-15 {
+  padding-left: 15px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mr-20 {
+  margin-right: 20px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.ml-20 {
+  margin-left: 20px !important;
+}
+
+.pt-20 {
+  padding-top: 20px !important;
+}
+
+.pr-20 {
+  padding-right: 20px !important;
+}
+
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.pl-20 {
+  padding-left: 20px !important;
+}
+
+.mt-25 {
+  margin-top: 25px !important;
+}
+
+.mr-25 {
+  margin-right: 25px !important;
+}
+
+.mb-25 {
+  margin-bottom: 25px !important;
+}
+
+.ml-25 {
+  margin-left: 25px !important;
+}
+
+.pt-25 {
+  padding-top: 25px !important;
+}
+
+.pr-25 {
+  padding-right: 25px !important;
+}
+
+.pb-25 {
+  padding-bottom: 25px !important;
+}
+
+.pl-25 {
+  padding-left: 25px !important;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mr-30 {
+  margin-right: 30px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.ml-30 {
+  margin-left: 30px !important;
+}
+
+.pt-30 {
+  padding-top: 30px !important;
+}
+
+.pr-30 {
+  padding-right: 30px !important;
+}
+
+.pb-30 {
+  padding-bottom: 30px !important;
+}
+
+.pl-30 {
+  padding-left: 30px !important;
+}
+
+.mt-35 {
+  margin-top: 35px !important;
+}
+
+.mr-35 {
+  margin-right: 35px !important;
+}
+
+.mb-35 {
+  margin-bottom: 35px !important;
+}
+
+.ml-35 {
+  margin-left: 35px !important;
+}
+
+.pt-35 {
+  padding-top: 35px !important;
+}
+
+.pr-35 {
+  padding-right: 35px !important;
+}
+
+.pb-35 {
+  padding-bottom: 35px !important;
+}
+
+.pl-35 {
+  padding-left: 35px !important;
+}
+
+.mt-40 {
+  margin-top: 40px !important;
+}
+
+.mr-40 {
+  margin-right: 40px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.ml-40 {
+  margin-left: 40px !important;
+}
+
+.pt-40 {
+  padding-top: 40px !important;
+}
+
+.pr-40 {
+  padding-right: 40px !important;
+}
+
+.pb-40 {
+  padding-bottom: 40px !important;
+}
+
+.pl-40 {
+  padding-left: 40px !important;
+}
+
+.mt-45 {
+  margin-top: 45px !important;
+}
+
+.mr-45 {
+  margin-right: 45px !important;
+}
+
+.mb-45 {
+  margin-bottom: 45px !important;
+}
+
+.ml-45 {
+  margin-left: 45px !important;
+}
+
+.pt-45 {
+  padding-top: 45px !important;
+}
+
+.pr-45 {
+  padding-right: 45px !important;
+}
+
+.pb-45 {
+  padding-bottom: 45px !important;
+}
+
+.pl-45 {
+  padding-left: 45px !important;
+}
+
+.mt-50 {
+  margin-top: 50px !important;
+}
+
+.mr-50 {
+  margin-right: 50px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.ml-50 {
+  margin-left: 50px !important;
+}
+
+.pt-50 {
+  padding-top: 50px !important;
+}
+
+.pr-50 {
+  padding-right: 50px !important;
+}
+
+.pb-50 {
+  padding-bottom: 50px !important;
+}
+
+.pl-50 {
+  padding-left: 50px !important;
+}
+
+.mt-55 {
+  margin-top: 55px !important;
+}
+
+.mr-55 {
+  margin-right: 55px !important;
+}
+
+.mb-55 {
+  margin-bottom: 55px !important;
+}
+
+.ml-55 {
+  margin-left: 55px !important;
+}
+
+.pt-55 {
+  padding-top: 55px !important;
+}
+
+.pr-55 {
+  padding-right: 55px !important;
+}
+
+.pb-55 {
+  padding-bottom: 55px !important;
+}
+
+.pl-55 {
+  padding-left: 55px !important;
+}
+
+.mt-60 {
+  margin-top: 60px !important;
+}
+
+.mr-60 {
+  margin-right: 60px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.ml-60 {
+  margin-left: 60px !important;
+}
+
+.pt-60 {
+  padding-top: 60px !important;
+}
+
+.pr-60 {
+  padding-right: 60px !important;
+}
+
+.pb-60 {
+  padding-bottom: 60px !important;
+}
+
+.pl-60 {
+  padding-left: 60px !important;
+}
+
+.mt-65 {
+  margin-top: 65px !important;
+}
+
+.mr-65 {
+  margin-right: 65px !important;
+}
+
+.mb-65 {
+  margin-bottom: 65px !important;
+}
+
+.ml-65 {
+  margin-left: 65px !important;
+}
+
+.pt-65 {
+  padding-top: 65px !important;
+}
+
+.pr-65 {
+  padding-right: 65px !important;
+}
+
+.pb-65 {
+  padding-bottom: 65px !important;
+}
+
+.pl-65 {
+  padding-left: 65px !important;
+}
+
+.mt-70 {
+  margin-top: 70px !important;
+}
+
+.mr-70 {
+  margin-right: 70px !important;
+}
+
+.mb-70 {
+  margin-bottom: 70px !important;
+}
+
+.ml-70 {
+  margin-left: 70px !important;
+}
+
+.pt-70 {
+  padding-top: 70px !important;
+}
+
+.pr-70 {
+  padding-right: 70px !important;
+}
+
+.pb-70 {
+  padding-bottom: 70px !important;
+}
+
+.pl-70 {
+  padding-left: 70px !important;
+}
+
+.mt-75 {
+  margin-top: 75px !important;
+}
+
+.mr-75 {
+  margin-right: 75px !important;
+}
+
+.mb-75 {
+  margin-bottom: 75px !important;
+}
+
+.ml-75 {
+  margin-left: 75px !important;
+}
+
+.pt-75 {
+  padding-top: 75px !important;
+}
+
+.pr-75 {
+  padding-right: 75px !important;
+}
+
+.pb-75 {
+  padding-bottom: 75px !important;
+}
+
+.pl-75 {
+  padding-left: 75px !important;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+.mr-80 {
+  margin-right: 80px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.ml-80 {
+  margin-left: 80px !important;
+}
+
+.pt-80 {
+  padding-top: 80px !important;
+}
+
+.pr-80 {
+  padding-right: 80px !important;
+}
+
+.pb-80 {
+  padding-bottom: 80px !important;
+}
+
+.pl-80 {
+  padding-left: 80px !important;
+}
+
+.mt-85 {
+  margin-top: 85px !important;
+}
+
+.mr-85 {
+  margin-right: 85px !important;
+}
+
+.mb-85 {
+  margin-bottom: 85px !important;
+}
+
+.ml-85 {
+  margin-left: 85px !important;
+}
+
+.pt-85 {
+  padding-top: 85px !important;
+}
+
+.pr-85 {
+  padding-right: 85px !important;
+}
+
+.pb-85 {
+  padding-bottom: 85px !important;
+}
+
+.pl-85 {
+  padding-left: 85px !important;
+}
+
+.mt-90 {
+  margin-top: 90px !important;
+}
+
+.mr-90 {
+  margin-right: 90px !important;
+}
+
+.mb-90 {
+  margin-bottom: 90px !important;
+}
+
+.ml-90 {
+  margin-left: 90px !important;
+}
+
+.pt-90 {
+  padding-top: 90px !important;
+}
+
+.pr-90 {
+  padding-right: 90px !important;
+}
+
+.pb-90 {
+  padding-bottom: 90px !important;
+}
+
+.pl-90 {
+  padding-left: 90px !important;
+}
+
+.mt-95 {
+  margin-top: 95px !important;
+}
+
+.mr-95 {
+  margin-right: 95px !important;
+}
+
+.mb-95 {
+  margin-bottom: 95px !important;
+}
+
+.ml-95 {
+  margin-left: 95px !important;
+}
+
+.pt-95 {
+  padding-top: 95px !important;
+}
+
+.pr-95 {
+  padding-right: 95px !important;
+}
+
+.pb-95 {
+  padding-bottom: 95px !important;
+}
+
+.pl-95 {
+  padding-left: 95px !important;
+}
+
+.mt-100 {
+  margin-top: 100px !important;
+}
+
+.mr-100 {
+  margin-right: 100px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+
+.ml-100 {
+  margin-left: 100px !important;
+}
+
+.pt-100 {
+  padding-top: 100px !important;
+}
+
+.pr-100 {
+  padding-right: 100px !important;
+}
+
+.pb-100 {
+  padding-bottom: 100px !important;
+}
+
+.pl-100 {
+  padding-left: 100px !important;
+}
+
+.mt-105 {
+  margin-top: 105px !important;
+}
+
+.mr-105 {
+  margin-right: 105px !important;
+}
+
+.mb-105 {
+  margin-bottom: 105px !important;
+}
+
+.ml-105 {
+  margin-left: 105px !important;
+}
+
+.pt-105 {
+  padding-top: 105px !important;
+}
+
+.pr-105 {
+  padding-right: 105px !important;
+}
+
+.pb-105 {
+  padding-bottom: 105px !important;
+}
+
+.pl-105 {
+  padding-left: 105px !important;
+}
+
+.mt-110 {
+  margin-top: 110px !important;
+}
+
+.mr-110 {
+  margin-right: 110px !important;
+}
+
+.mb-110 {
+  margin-bottom: 110px !important;
+}
+
+.ml-110 {
+  margin-left: 110px !important;
+}
+
+.pt-110 {
+  padding-top: 110px !important;
+}
+
+.pr-110 {
+  padding-right: 110px !important;
+}
+
+.pb-110 {
+  padding-bottom: 110px !important;
+}
+
+.pl-110 {
+  padding-left: 110px !important;
+}
+
+.mt-115 {
+  margin-top: 115px !important;
+}
+
+.mr-115 {
+  margin-right: 115px !important;
+}
+
+.mb-115 {
+  margin-bottom: 115px !important;
+}
+
+.ml-115 {
+  margin-left: 115px !important;
+}
+
+.pt-115 {
+  padding-top: 115px !important;
+}
+
+.pr-115 {
+  padding-right: 115px !important;
+}
+
+.pb-115 {
+  padding-bottom: 115px !important;
+}
+
+.pl-115 {
+  padding-left: 115px !important;
+}
+
+.mt-120 {
+  margin-top: 120px !important;
+}
+
+.mr-120 {
+  margin-right: 120px !important;
+}
+
+.mb-120 {
+  margin-bottom: 120px !important;
+}
+
+.ml-120 {
+  margin-left: 120px !important;
+}
+
+.pt-120 {
+  padding-top: 120px !important;
+}
+
+.pr-120 {
+  padding-right: 120px !important;
+}
+
+.pb-120 {
+  padding-bottom: 120px !important;
+}
+
+.pl-120 {
+  padding-left: 120px !important;
+}
+
+/* ========================================
+    border
+======================================== */
+hr.solid {
+  border: none;
+  border-top: 1px solid black;
+}
+
+hr.dot {
+  border: none;
+  border-top: 1px dotted black;
+}
+
+/* ========================================
+
+    animation
+        キーフレームアニメーションを定義する
+
+    INDEX
+        - keyframe
+        - option parts
+======================================== */
+/* ========================================
+    keyframe
+======================================== */
+.a-fadein-up {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.a-fadein-up.active {
+  -webkit-animation-name: fadein-up;
+          animation-name: fadein-up;
+}
+
+@-webkit-keyframes fadein-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadein-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* ========================================
+    option parts
+
+        - 経過時間 animation-duration
+        - 開始までの待ち時間 animation-delay
+        - 繰り返し回数 animation-iteration-count
+        - 往復するかどうか animation-direction
+        - 完了後の状態 animation-fill-mode
+        - イージング animate-timing-function
+
+======================================== */
+.a-duration--00 {
+  -webkit-animation-duration: 0s !important;
+          animation-duration: 0s !important;
+}
+
+.a-duration--01 {
+  -webkit-animation-duration: 0.1s !important;
+          animation-duration: 0.1s !important;
+}
+
+.a-duration--02 {
+  -webkit-animation-duration: 0.2s !important;
+          animation-duration: 0.2s !important;
+}
+
+.a-duration--03 {
+  -webkit-animation-duration: 0.3s !important;
+          animation-duration: 0.3s !important;
+}
+
+.a-duration--04 {
+  -webkit-animation-duration: 0.4s !important;
+          animation-duration: 0.4s !important;
+}
+
+.a-duration--05 {
+  -webkit-animation-duration: 0.5s !important;
+          animation-duration: 0.5s !important;
+}
+
+.a-duration--06 {
+  -webkit-animation-duration: 0.6s !important;
+          animation-duration: 0.6s !important;
+}
+
+.a-duration--07 {
+  -webkit-animation-duration: 0.7s !important;
+          animation-duration: 0.7s !important;
+}
+
+.a-duration--08 {
+  -webkit-animation-duration: 0.8s !important;
+          animation-duration: 0.8s !important;
+}
+
+.a-duration--09 {
+  -webkit-animation-duration: 0.9s !important;
+          animation-duration: 0.9s !important;
+}
+
+.a-duration--10 {
+  -webkit-animation-duration: 1s !important;
+          animation-duration: 1s !important;
+}
+
+.a-duration--11 {
+  -webkit-animation-duration: 1.1s !important;
+          animation-duration: 1.1s !important;
+}
+
+.a-duration--12 {
+  -webkit-animation-duration: 1.2s !important;
+          animation-duration: 1.2s !important;
+}
+
+.a-duration--13 {
+  -webkit-animation-duration: 1.3s !important;
+          animation-duration: 1.3s !important;
+}
+
+.a-duration--14 {
+  -webkit-animation-duration: 1.4s !important;
+          animation-duration: 1.4s !important;
+}
+
+.a-duration--15 {
+  -webkit-animation-duration: 1.5s !important;
+          animation-duration: 1.5s !important;
+}
+
+.a-duration--16 {
+  -webkit-animation-duration: 1.6s !important;
+          animation-duration: 1.6s !important;
+}
+
+.a-duration--17 {
+  -webkit-animation-duration: 1.7s !important;
+          animation-duration: 1.7s !important;
+}
+
+.a-duration--18 {
+  -webkit-animation-duration: 1.8s !important;
+          animation-duration: 1.8s !important;
+}
+
+.a-duration--19 {
+  -webkit-animation-duration: 1.9s !important;
+          animation-duration: 1.9s !important;
+}
+
+.a-duration--20 {
+  -webkit-animation-duration: 2s !important;
+          animation-duration: 2s !important;
+}
+
+.a-duration--21 {
+  -webkit-animation-duration: 2.1s !important;
+          animation-duration: 2.1s !important;
+}
+
+.a-duration--22 {
+  -webkit-animation-duration: 2.2s !important;
+          animation-duration: 2.2s !important;
+}
+
+.a-duration--23 {
+  -webkit-animation-duration: 2.3s !important;
+          animation-duration: 2.3s !important;
+}
+
+.a-duration--24 {
+  -webkit-animation-duration: 2.4s !important;
+          animation-duration: 2.4s !important;
+}
+
+.a-duration--25 {
+  -webkit-animation-duration: 2.5s !important;
+          animation-duration: 2.5s !important;
+}
+
+.a-duration--26 {
+  -webkit-animation-duration: 2.6s !important;
+          animation-duration: 2.6s !important;
+}
+
+.a-duration--27 {
+  -webkit-animation-duration: 2.7s !important;
+          animation-duration: 2.7s !important;
+}
+
+.a-duration--28 {
+  -webkit-animation-duration: 2.8s !important;
+          animation-duration: 2.8s !important;
+}
+
+.a-duration--29 {
+  -webkit-animation-duration: 2.9s !important;
+          animation-duration: 2.9s !important;
+}
+
+.a-duration--30 {
+  -webkit-animation-duration: 3s !important;
+          animation-duration: 3s !important;
+}
+
+.a-duration--31 {
+  -webkit-animation-duration: 3.1s !important;
+          animation-duration: 3.1s !important;
+}
+
+.a-duration--32 {
+  -webkit-animation-duration: 3.2s !important;
+          animation-duration: 3.2s !important;
+}
+
+.a-duration--33 {
+  -webkit-animation-duration: 3.3s !important;
+          animation-duration: 3.3s !important;
+}
+
+.a-duration--34 {
+  -webkit-animation-duration: 3.4s !important;
+          animation-duration: 3.4s !important;
+}
+
+.a-duration--35 {
+  -webkit-animation-duration: 3.5s !important;
+          animation-duration: 3.5s !important;
+}
+
+.a-duration--36 {
+  -webkit-animation-duration: 3.6s !important;
+          animation-duration: 3.6s !important;
+}
+
+.a-duration--37 {
+  -webkit-animation-duration: 3.7s !important;
+          animation-duration: 3.7s !important;
+}
+
+.a-duration--38 {
+  -webkit-animation-duration: 3.8s !important;
+          animation-duration: 3.8s !important;
+}
+
+.a-duration--39 {
+  -webkit-animation-duration: 3.9s !important;
+          animation-duration: 3.9s !important;
+}
+
+.a-duration--40 {
+  -webkit-animation-duration: 4s !important;
+          animation-duration: 4s !important;
+}
+
+.a-duration--41 {
+  -webkit-animation-duration: 4.1s !important;
+          animation-duration: 4.1s !important;
+}
+
+.a-duration--42 {
+  -webkit-animation-duration: 4.2s !important;
+          animation-duration: 4.2s !important;
+}
+
+.a-duration--43 {
+  -webkit-animation-duration: 4.3s !important;
+          animation-duration: 4.3s !important;
+}
+
+.a-duration--44 {
+  -webkit-animation-duration: 4.4s !important;
+          animation-duration: 4.4s !important;
+}
+
+.a-duration--45 {
+  -webkit-animation-duration: 4.5s !important;
+          animation-duration: 4.5s !important;
+}
+
+.a-duration--46 {
+  -webkit-animation-duration: 4.6s !important;
+          animation-duration: 4.6s !important;
+}
+
+.a-duration--47 {
+  -webkit-animation-duration: 4.7s !important;
+          animation-duration: 4.7s !important;
+}
+
+.a-duration--48 {
+  -webkit-animation-duration: 4.8s !important;
+          animation-duration: 4.8s !important;
+}
+
+.a-duration--49 {
+  -webkit-animation-duration: 4.9s !important;
+          animation-duration: 4.9s !important;
+}
+
+.a-duration--50 {
+  -webkit-animation-duration: 5s !important;
+          animation-duration: 5s !important;
+}
+
+.a-delay--00 {
+  -webkit-animation-delay: 0s !important;
+          animation-delay: 0s !important;
+}
+
+.a-delay--01 {
+  -webkit-animation-delay: 0.1s !important;
+          animation-delay: 0.1s !important;
+}
+
+.a-delay--02 {
+  -webkit-animation-delay: 0.2s !important;
+          animation-delay: 0.2s !important;
+}
+
+.a-delay--03 {
+  -webkit-animation-delay: 0.3s !important;
+          animation-delay: 0.3s !important;
+}
+
+.a-delay--04 {
+  -webkit-animation-delay: 0.4s !important;
+          animation-delay: 0.4s !important;
+}
+
+.a-delay--05 {
+  -webkit-animation-delay: 0.5s !important;
+          animation-delay: 0.5s !important;
+}
+
+.a-delay--06 {
+  -webkit-animation-delay: 0.6s !important;
+          animation-delay: 0.6s !important;
+}
+
+.a-delay--07 {
+  -webkit-animation-delay: 0.7s !important;
+          animation-delay: 0.7s !important;
+}
+
+.a-delay--08 {
+  -webkit-animation-delay: 0.8s !important;
+          animation-delay: 0.8s !important;
+}
+
+.a-delay--09 {
+  -webkit-animation-delay: 0.9s !important;
+          animation-delay: 0.9s !important;
+}
+
+.a-delay--10 {
+  -webkit-animation-delay: 1s !important;
+          animation-delay: 1s !important;
+}
+
+.a-delay--11 {
+  -webkit-animation-delay: 1.1s !important;
+          animation-delay: 1.1s !important;
+}
+
+.a-delay--12 {
+  -webkit-animation-delay: 1.2s !important;
+          animation-delay: 1.2s !important;
+}
+
+.a-delay--13 {
+  -webkit-animation-delay: 1.3s !important;
+          animation-delay: 1.3s !important;
+}
+
+.a-delay--14 {
+  -webkit-animation-delay: 1.4s !important;
+          animation-delay: 1.4s !important;
+}
+
+.a-delay--15 {
+  -webkit-animation-delay: 1.5s !important;
+          animation-delay: 1.5s !important;
+}
+
+.a-delay--16 {
+  -webkit-animation-delay: 1.6s !important;
+          animation-delay: 1.6s !important;
+}
+
+.a-delay--17 {
+  -webkit-animation-delay: 1.7s !important;
+          animation-delay: 1.7s !important;
+}
+
+.a-delay--18 {
+  -webkit-animation-delay: 1.8s !important;
+          animation-delay: 1.8s !important;
+}
+
+.a-delay--19 {
+  -webkit-animation-delay: 1.9s !important;
+          animation-delay: 1.9s !important;
+}
+
+.a-delay--20 {
+  -webkit-animation-delay: 2s !important;
+          animation-delay: 2s !important;
+}
+
+.a-delay--21 {
+  -webkit-animation-delay: 2.1s !important;
+          animation-delay: 2.1s !important;
+}
+
+.a-delay--22 {
+  -webkit-animation-delay: 2.2s !important;
+          animation-delay: 2.2s !important;
+}
+
+.a-delay--23 {
+  -webkit-animation-delay: 2.3s !important;
+          animation-delay: 2.3s !important;
+}
+
+.a-delay--24 {
+  -webkit-animation-delay: 2.4s !important;
+          animation-delay: 2.4s !important;
+}
+
+.a-delay--25 {
+  -webkit-animation-delay: 2.5s !important;
+          animation-delay: 2.5s !important;
+}
+
+.a-delay--26 {
+  -webkit-animation-delay: 2.6s !important;
+          animation-delay: 2.6s !important;
+}
+
+.a-delay--27 {
+  -webkit-animation-delay: 2.7s !important;
+          animation-delay: 2.7s !important;
+}
+
+.a-delay--28 {
+  -webkit-animation-delay: 2.8s !important;
+          animation-delay: 2.8s !important;
+}
+
+.a-delay--29 {
+  -webkit-animation-delay: 2.9s !important;
+          animation-delay: 2.9s !important;
+}
+
+.a-delay--30 {
+  -webkit-animation-delay: 3s !important;
+          animation-delay: 3s !important;
+}
+
+.a-delay--31 {
+  -webkit-animation-delay: 3.1s !important;
+          animation-delay: 3.1s !important;
+}
+
+.a-delay--32 {
+  -webkit-animation-delay: 3.2s !important;
+          animation-delay: 3.2s !important;
+}
+
+.a-delay--33 {
+  -webkit-animation-delay: 3.3s !important;
+          animation-delay: 3.3s !important;
+}
+
+.a-delay--34 {
+  -webkit-animation-delay: 3.4s !important;
+          animation-delay: 3.4s !important;
+}
+
+.a-delay--35 {
+  -webkit-animation-delay: 3.5s !important;
+          animation-delay: 3.5s !important;
+}
+
+.a-delay--36 {
+  -webkit-animation-delay: 3.6s !important;
+          animation-delay: 3.6s !important;
+}
+
+.a-delay--37 {
+  -webkit-animation-delay: 3.7s !important;
+          animation-delay: 3.7s !important;
+}
+
+.a-delay--38 {
+  -webkit-animation-delay: 3.8s !important;
+          animation-delay: 3.8s !important;
+}
+
+.a-delay--39 {
+  -webkit-animation-delay: 3.9s !important;
+          animation-delay: 3.9s !important;
+}
+
+.a-delay--40 {
+  -webkit-animation-delay: 4s !important;
+          animation-delay: 4s !important;
+}
+
+.a-delay--41 {
+  -webkit-animation-delay: 4.1s !important;
+          animation-delay: 4.1s !important;
+}
+
+.a-delay--42 {
+  -webkit-animation-delay: 4.2s !important;
+          animation-delay: 4.2s !important;
+}
+
+.a-delay--43 {
+  -webkit-animation-delay: 4.3s !important;
+          animation-delay: 4.3s !important;
+}
+
+.a-delay--44 {
+  -webkit-animation-delay: 4.4s !important;
+          animation-delay: 4.4s !important;
+}
+
+.a-delay--45 {
+  -webkit-animation-delay: 4.5s !important;
+          animation-delay: 4.5s !important;
+}
+
+.a-delay--46 {
+  -webkit-animation-delay: 4.6s !important;
+          animation-delay: 4.6s !important;
+}
+
+.a-delay--47 {
+  -webkit-animation-delay: 4.7s !important;
+          animation-delay: 4.7s !important;
+}
+
+.a-delay--48 {
+  -webkit-animation-delay: 4.8s !important;
+          animation-delay: 4.8s !important;
+}
+
+.a-delay--49 {
+  -webkit-animation-delay: 4.9s !important;
+          animation-delay: 4.9s !important;
+}
+
+.a-delay--50 {
+  -webkit-animation-delay: 5s !important;
+          animation-delay: 5s !important;
+}
+
+.a-count--0 {
+  -webkit-animation-iteration-count: 0 !important;
+          animation-iteration-count: 0 !important;
+}
+
+.a-count--1 {
+  -webkit-animation-iteration-count: 1 !important;
+          animation-iteration-count: 1 !important;
+}
+
+.a-count--2 {
+  -webkit-animation-iteration-count: 2 !important;
+          animation-iteration-count: 2 !important;
+}
+
+.a-count--3 {
+  -webkit-animation-iteration-count: 3 !important;
+          animation-iteration-count: 3 !important;
+}
+
+.a-count--4 {
+  -webkit-animation-iteration-count: 4 !important;
+          animation-iteration-count: 4 !important;
+}
+
+.a-count--5 {
+  -webkit-animation-iteration-count: 5 !important;
+          animation-iteration-count: 5 !important;
+}
+
+.a-count--6 {
+  -webkit-animation-iteration-count: 6 !important;
+          animation-iteration-count: 6 !important;
+}
+
+.a-count--7 {
+  -webkit-animation-iteration-count: 7 !important;
+          animation-iteration-count: 7 !important;
+}
+
+.a-count--8 {
+  -webkit-animation-iteration-count: 8 !important;
+          animation-iteration-count: 8 !important;
+}
+
+.a-count--9 {
+  -webkit-animation-iteration-count: 9 !important;
+          animation-iteration-count: 9 !important;
+}
+
+.a-count--10 {
+  -webkit-animation-iteration-count: 10 !important;
+          animation-iteration-count: 10 !important;
+}
+
+.a-count--infinite {
+  -webkit-animation-iteration-count: infinite !important;
+          animation-iteration-count: infinite !important;
+}
+
+.a-direction--on {
+  -webkit-animation-direction: alternat !important;
+          animation-direction: alternat !important;
+}
+
+.a-direction--off {
+  -webkit-animation-direction: normal !important;
+          animation-direction: normal !important;
+}
+
+.a-mode--both {
+  -webkit-animation-fill-mode: both !important;
+          animation-fill-mode: both !important;
+}
+
+.a-mode--forwards {
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important;
+}
+
+.a-mode--backwards {
+  -webkit-animation-fill-mode: backwards !important;
+          animation-fill-mode: backwards !important;
+}
+
+.a-timing--linear {
+  -webkit-animation-timing-function: linear !important;
+          animation-timing-function: linear !important;
+}
+
+.a-timing--in-sine {
+  -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715) !important;
+          animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715) !important;
+}
+
+.a-timing--out-sine {
+  -webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+          animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+}
+
+.a-timing--in-out-sine {
+  -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
+          animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
+}
+
+.a-timing--in-quad {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53) !important;
+          animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53) !important;
+}
+
+.a-timing--out-quad {
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+          animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.a-timing--in-out-quad {
+  -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+          animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+}
+
+.a-timing--in-cubic {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19) !important;
+          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19) !important;
+}
+
+.a-timing--out-cubic {
+  -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+}
+
+.a-timing--in-out-cubic {
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+
+.a-timing--in-quart {
+  -webkit-animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22) !important;
+          animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22) !important;
+}
+
+.a-timing--out-quart {
+  -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+          animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.a-timing--in-out-quart {
+  -webkit-animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1) !important;
+          animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1) !important;
+}
+
+.a-timing--in-quint {
+  -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06) !important;
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06) !important;
+}
+
+.a-timing--out-quint {
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1) !important;
+          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.a-timing--in-out-quint {
+  -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+          animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+}
+
+.a-timing--in-expo {
+  -webkit-animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
+          animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
+}
+
+.a-timing--out-expo {
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1) !important;
+          animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+.a-timing--in-out-expo {
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1) !important;
+          animation-timing-function: cubic-bezier(1, 0, 0, 1) !important;
+}
+
+.a-timing--in-circ {
+  -webkit-animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335) !important;
+          animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335) !important;
+}
+
+.a-timing--out-circ {
+  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+}
+
+.a-timing--in-out-circ {
+  -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;
+}
+
+.a-timing--in-back {
+  -webkit-animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045) !important;
+          animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045) !important;
+}
+
+.a-timing--out-back {
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.a-timing--in-out-back {
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+/* ========================================
+    components
+        共通で使うパーツを書くスタイル
+======================================== */
+/* ========================================
+
+    common
+        共通に使えるパーツ
+
+    INDEX
+        - wrapper
+
+======================================== */
+/* ========================================
+    wrapper
+======================================== */
+/* ========================================
+    
+    header
+        ヘッダーのパーツ
+
+    INDEX
+        - common
+
+======================================== */
+/* ========================================
+    common
+======================================== */
+/* ========================================
+
+    footer
+        フッターのパーツ
+
+    INDEX
+        - common
+
+======================================== */
+/* ========================================
+    common
+======================================== */
+/* ========================================
+    
+    sns
+        ソーシャルメディア系のスタイル
+
+    INDEX
+        - menu
+
+======================================== */
+/* ========================================
+    menu
+======================================== */
+.sns-menu__item, .sns-menu__item--twitter, .sns-menu__item--instagram, .sns-menu__item--facebook, .sns-menu__item--youtube, .sns-menu__item--line, .sns-menu__item--google {
+  display: inline-block;
+}
+
+/* ========================================
+
+    nav
+        ナビゲーションのパーツ
+
+    INDEX
+        - global
+        - trigger
+        - sub
+        - pnkz
+        - members menu
+
+======================================== */
+/* ========================================
+    global
+======================================== */
+/* ========================================
+    trigger
+======================================== */
+.trigger-menu, .trigger-menu span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.trigger-menu {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+
+.trigger-menu span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.trigger-menu span:nth-of-type(1) {
+  top: 0;
+}
+
+.trigger-menu span:nth-of-type(2) {
+  top: 20px;
+}
+
+.trigger-menu span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.trigger-menu.active:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+          transform: translateY(20px) rotate(-45deg);
+}
+
+.trigger-menu.active:nth-of-type(2) {
+  opacity: 0;
+}
+
+.trigger-menu.active:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+          transform: translateY(-20px) rotate(45deg);
+}
+
+/* ========================================
+    sub
+======================================== */
+/* ========================================
+    pnkz
+======================================== */
+/* ========================================
+    members menu
+======================================== */
+/* ========================================
+
+    support
+        サポートのパーツ
+
+    INDEX
+        - area
+        - list
+
+======================================== */
+/* ========================================
+    area
+======================================== */
+/* ========================================
+    list
+======================================== */
+/* ========================================
+
+    pager
+        ページャーのパーツ
+
+    INDEX
+        - pager
+
+======================================== */
+/* ========================================
+    pager
+======================================== */
+.pager .btn-none {
+  pointer-events: none;
+}
+
+/* ========================================
+
+    title
+        見出しのパーツ
+
+    INDEX
+        - section
+        - main
+        - sub
+
+======================================== */
+/* ========================================
+    global
+        大見出し
+======================================== */
+/* ========================================
+    main
+        中見出し
+======================================== */
+/* ========================================
+    sub
+        子見出し
+======================================== */
+/* ========================================
+
+    btn
+        ボタンのスタイル
+
+    INDEX
+        - class
+        - normal
+        - special
+
+======================================== */
+.btn-100, .btn-50, .btn-30, .btn-30--right, .btn-30--left {
+  border-radius: 5px;
+}
+
+.btn-special-100, .btn-special-50 {
+  background-color: red;
+  color: white;
+}
+
+.btn-100, .btn-special-100 {
+  display: block;
+  width: 100%;
+}
+
+.btn-50, .btn-special-50 {
+  display: inline-block;
+  width: 49%;
+}
+
+.btn-30, .btn-30--right, .btn-30--left {
+  display: block;
+  width: 30%;
+}
+
+/* ========================================
+    normal
+        よく使うボタン
+======================================== */
+.btn-30, .btn-30--right, .btn-30--left {
+  margin: auto;
+}
+
+.btn-30--right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.btn-30--left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* ========================================
+    special
+        特別目立たせたいボタン
+======================================== */
+/* ========================================
+  
+    list
+        リストのスタイル
+
+    INDEX
+        - text list
+        - thumb list
+        - circle list
+
+======================================== */
+.list, .list--thumb, .list--circle {
+  display: block;
+}
+
+.list__item {
+  word-break: break-word;
+  font-size: 16px;
+}
+
+.list--thumb .list__item {
+  font-size: 14px;
+}
+
+.list--circle .list__item {
+  font-size: 12px;
+}
+
+/* ========================================
+    
+    movie
+        動画関係のパーツ
+
+    INDEX
+        - youtube
+        - milvi
+
+======================================== */
+/* ========================================
+    youtube
+======================================== */
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ========================================
+    milvi
+======================================== */
+.movie-container {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.eviry-screen {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+.eviry-baseplayer {
+  position: absolute !important;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+.eviry-baseplayer,
+.eviry-deck,
+.miovip-controlpanel {
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+@media screen and (min-width: 780px) {
+  /* ========================================
+  
+    hover
+        ホバーの動きはここに定義して、
+        %始まりのクラスをextendsして使いたい
+
+    INDEX
+        - opacity
+
+======================================== */
+  /* ========================================
+    opacity
+======================================== */
+}
+
+/* ========================================
+    pages
+        ページごとに独立するスタイル
+======================================== */
+/* ========================================
+
+    index
+        indexページのみで使うスタイル
+
+    INDEX
+        - main
+
+======================================== */
+/* ========================================
+    main
+======================================== */
