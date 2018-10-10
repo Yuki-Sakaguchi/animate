@@ -3,7 +3,7 @@
 
 # DEMO
 https://yuki-sakaguchi.github.io/animate/public/anime.html  
-https://yuki-sakaguchi.github.io/animate/public/animepuls.html  
+https://yuki-sakaguchi.github.io/animate/public/animeplus.html  
 https://yuki-sakaguchi.github.io/animate/public/mo.html  
 
 # 参考
