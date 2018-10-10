@@ -16,3 +16,4 @@ https://shakrmedia.github.io/tuesday/
 * レスポンシブの対応
 * パフォーマンス
 * 並行処理のやり易さ
+* スタートとポーズがやりやすい
