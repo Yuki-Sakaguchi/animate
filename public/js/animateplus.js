@@ -10,7 +10,8 @@ import animate from "./lib/animateplus.js";
       elements: ".el.box",
       duration: 2000,
       delay: index => index * 100,
-      transform: ["scale(0)", "scale(1)"]
+      transform: ["scale(0)", "scale(1)"],
+      loop: true
     })
     .then(options => animate({
       ...options,
