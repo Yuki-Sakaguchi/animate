@@ -10,24 +10,9 @@ html
     meta(charset='UTF-8')
     meta(http-quiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-
+    
     //- ページ情報
-    title #{meta.title}
-    meta(name='keywords', content=`${meta.keywords}`)
-    meta(name='description', content=`${meta.description}`)
-
-    //- OGP情報
-    meta(property='og:title', content=`${og.title}`)
-    meta(property='og:type', content=`${og.type}`)
-    meta(property='og:description', content=`${og.description}`)
-    meta(property='og:url', content=`${og.url}`)
-    meta(property='og:image', content=`${og.image}`)
-
-    //- Twitter情報
-    meta(name='twitter:card', content=`${twitter.card}`)
-    meta(name='twitter:site', content=`${twitter.site}`)
-    meta(name='twitter:title', content=`${twitter.title}`)
-    meta(name='twitter:description', content=`${twitter.description}`)
+    title #{title}
 
     //- css
     block style
@@ -42,7 +27,8 @@ html
       #anime
         -
           var animeList = [
-            '_box.pug'
+            '_box.pug',
+            '_box.pug',
           ];
         each item in animeList 
           section.anime-box
